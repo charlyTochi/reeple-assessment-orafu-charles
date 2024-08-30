@@ -9,9 +9,13 @@ The Currency Converter app is a React Native application designed to convert amo
 # Features
 
 Real-time Currency Conversion: Converts amounts in real-time based on the latest exchange rates.
+
 Currency Selection: Allows users to select source and target currencies from a dropdown menu.
+
 Responsive Design: Optimized for mobile devices with a clean and user-friendly interface.
+
 Loading Indicator: Displays a spinner while fetching exchange rates.
+
 Refresh Button: Manually refreshes exchange rates.
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
