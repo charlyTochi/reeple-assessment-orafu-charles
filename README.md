@@ -18,6 +18,27 @@ Loading Indicator: Displays a spinner while fetching exchange rates.
 
 Refresh Button: Manually refreshes exchange rates.
 
+
+
+# Setup Instructions
+
+
+# Prerequisites
+
+Node.js: Make sure you have Node.js installed. You can download it from (https://nodejs.org)
+
+# Installation
+
+# Clone the Repository:
+git clone https://github.com/charlyTochi/reeple-assessment-orafu-charles.git
+
+# Navigate to the Project Directory:
+cd Assesement
+
+# Install Dependencies:
+npm install
+
+
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
