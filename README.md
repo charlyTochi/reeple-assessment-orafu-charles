@@ -18,6 +18,43 @@ Loading Indicator: Displays a spinner while fetching exchange rates.
 
 Refresh Button: Manually refreshes exchange rates.
 
+
+
+
+# Project Structure
+
+src/: Contains the source code for the application.
+
+components/: Contains reusable React components.
+
+hooks/: Custom React hooks used for fetching exchange rates.
+
+utils/: Utility functions and constants, such as currency symbols and formatters.
+
+App.js: The main entry point of the application.
+
+
+# Usage
+
+Select Currencies: Use the dropdown menus to choose the source and target currencies.
+
+Enter Amount: Input the amount to be converted in the text field.
+
+Refresh Rates: Click the "Refresh Rates" button to update the exchange rates manually.
+
+
+# Considerations and Limitations
+
+API Rate Limits: The app depends on a currency exchange rate API, which may have rate limits. Ensure that your API key (if applicable) adheres to the limits to avoid disruptions.
+
+Error Handling: Basic error handling is included. For production use, consider implementing more robust error handling and user feedback mechanisms.
+
+Currency Data: The list of available currencies is static. Ensure that the currencies array in AppConstants is kept up to date with relevant currencies.
+
+Testing: While the app is functional, thorough testing on various devices and screen sizes is recommended to ensure a consistent user experience.
+
+
+
 # Setup Instructions
 
 # Prerequisites
@@ -113,36 +150,3 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-
-# Project Structure
-
-src/: Contains the source code for the application.
-
-components/: Contains reusable React components.
-
-hooks/: Custom React hooks used for fetching exchange rates.
-
-utils/: Utility functions and constants, such as currency symbols and formatters.
-
-App.js: The main entry point of the application.
-
-
-# Usage
-
-Select Currencies: Use the dropdown menus to choose the source and target currencies.
-
-Enter Amount: Input the amount to be converted in the text field.
-
-Refresh Rates: Click the "Refresh Rates" button to update the exchange rates manually.
-
-
-# Considerations and Limitations
-
-API Rate Limits: The app depends on a currency exchange rate API, which may have rate limits. Ensure that your API key (if applicable) adheres to the limits to avoid disruptions.
-
-Error Handling: Basic error handling is included. For production use, consider implementing more robust error handling and user feedback mechanisms.
-
-Currency Data: The list of available currencies is static. Ensure that the currencies array in AppConstants is kept up to date with relevant currencies.
-
-Testing: While the app is functional, thorough testing on various devices and screen sizes is recommended to ensure a consistent user experience.
-
