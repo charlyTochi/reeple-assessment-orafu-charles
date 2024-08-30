@@ -1,8 +1,20 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# Currency Converter React Native App
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+# Overview
+
+The Currency Converter app is a React Native application designed to convert amounts between different currencies. The app fetches real-time exchange rates and performs the currency conversion dynamically as the user inputs the amount.
+
+# Features
+
+Real-time Currency Conversion: Converts amounts in real-time based on the latest exchange rates.
+Currency Selection: Allows users to select source and target currencies from a dropdown menu.
+Responsive Design: Optimized for mobile devices with a clean and user-friendly interface.
+Loading Indicator: Displays a spinner while fetching exchange rates.
+Refresh Button: Manually refreshes exchange rates.
+
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
