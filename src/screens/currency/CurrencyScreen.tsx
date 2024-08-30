@@ -60,12 +60,14 @@ export const CurrencyScreen = () => {
         <Picker
           selectedValue={sourceCurrency}
           onValueChange={itemValue => setSourceCurrency(itemValue)}
+          itemStyle={styles.pickerItem}
           style={styles.picker}>
           {currencies.map(currency => (
             <Picker.Item
               label={currency.label}
               value={currency.value}
               key={currency.value}
+              color="black"
             />
           ))}
         </Picker>
@@ -76,12 +78,14 @@ export const CurrencyScreen = () => {
         <Picker
           selectedValue={targetCurrency}
           onValueChange={itemValue => setTargetCurrency(itemValue)}
+          itemStyle={styles.pickerItem}
           style={styles.picker}>
           {currencies.map(currency => (
             <Picker.Item
               label={currency.label}
               value={currency.value}
               key={currency.value}
+              color="black"
             />
           ))}
         </Picker>
@@ -92,6 +96,7 @@ export const CurrencyScreen = () => {
         style={styles.input}
         placeholder="Enter amount"
         keyboardType="numeric"
+        placeholderTextColor="#7f8c8d"
         value={amount}
         onChangeText={handleAmountChange}
       />
@@ -139,6 +144,11 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     textAlign: 'center',
   },
+  pickerItem: {
+    color: '#000', // Set the color to ensure visibility
+    fontSize: 16, // Adjust the font size if needed
+  },
+
   card: {
     width: '100%',
     backgroundColor: '#ffffff',
@@ -176,6 +186,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 5,
+    color: '#000',
   },
   loader: {
     marginVertical: 20,
