@@ -16,6 +16,8 @@ Responsive Design: Optimized for mobile devices with a clean and user-friendly i
 
 Loading Indicator: Displays a spinner while fetching exchange rates.
 
+Network Check: Confirms the availablility of internet connection on the app and give user feedback.
+
 Refresh Button: Manually refreshes exchange rates.
 
 
@@ -29,7 +31,7 @@ components/: Contains reusable React components.
 
 hooks/: Custom React hooks used for fetching exchange rates.
 
-utils/: Utility functions and constants, such as currency symbols and formatters.
+utils/: Utility functions and constants, such as currency symbols, network info and formatters.
 
 App.js: The main entry point of the application.
 

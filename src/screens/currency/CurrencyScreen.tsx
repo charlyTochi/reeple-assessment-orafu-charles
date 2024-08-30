@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,11 +6,13 @@ import {
   TextInput,
   ActivityIndicator,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import {currencies, currencySymbols} from '../../utils/AppConstants';
 import {balanceFormatter} from '../../utils/AmountFormatter';
 import useExchangeRate from './hooks/useExchangeRate';
+import useNetworkStatus from '../../utils/NetworkInfo';
 
 export const CurrencyScreen = () => {
   const [sourceCurrency, setSourceCurrency] = useState('USD');
@@ -21,17 +23,32 @@ export const CurrencyScreen = () => {
     targetCurrency,
   );
   const [convertedAmount, setConvertedAmount] = useState('');
+  const isConnected = useNetworkStatus();
+
+  // Show alert only when network status changes to offline
+  useEffect(() => {
+    if (isConnected === false) {
+      Alert.alert(
+        'No Internet Connection',
+        'You are currently offline. Exchange rates may not be updated.',
+      );
+    }
+  }, [isConnected]); // Only run when isConnected changes
 
   // Convert amount in real-time
   const handleAmountChange = (input: string) => {
     setAmount(input);
-    if (exchangeRate && input) {
-      const result = (parseFloat(input) * exchangeRate).toFixed(2);
+  };
+
+  // Update converted amount whenever amount, exchange rate, source or target currency changes
+  useEffect(() => {
+    if (exchangeRate && amount) {
+      const result = (parseFloat(amount) * exchangeRate).toFixed(2);
       setConvertedAmount(result);
     } else {
       setConvertedAmount('');
     }
-  };
+  }, [amount, exchangeRate, sourceCurrency, targetCurrency]);
 
   return (
     <View style={styles.container}>
